@@ -1,0 +1,15 @@
+﻿@model FormViewModel
+
+<h1>Данные из анкеты</h1>
+<hr />
+
+@Html.ActionLink("Вернуться на главную страницу", "Index", "Home")
+<hr />
+
+<p>
+    <b>Имя</b>: @Model.FirstName
+</p>
+
+<p>
+    <b>Фамилия</b>: @Model.LastName
+</p>

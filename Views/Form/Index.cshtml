@@ -1,0 +1,26 @@
+﻿@model FormViewModel
+
+<h1>Анкета</h1>
+<hr />
+
+@Html.ActionLink("Вернуться на главную страницу", "Index", "Home")
+<hr />
+
+@using (Html.BeginForm("Process", "Form", FormMethod.Post))
+{
+    <div class="mb-3">
+        @Html.BootstrapLabelFor(m => m.FirstName)
+        @Html.EditorFor(m => m.FirstName)
+        @Html.BootstrapValidationMessageFor(m => m.FirstName)
+    </div>
+
+    <div class="mb-3">
+        @Html.BootstrapLabelFor(m => m.LastName)
+        @Html.EditorFor(m => m.LastName)
+        @Html.BootstrapValidationMessageFor(m => m.LastName)
+    </div>
+
+    <div class="mb-3">
+        @Html.BootstrapSubmit("Сохранить анкету", "bi-floppy")
+    </div>
+}
