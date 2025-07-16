@@ -1,4 +1,14 @@
-﻿<h1>Главная страница</h1>
+﻿@using System.Drawing
+<h1>Главная страница</h1>
 <hr />
 
 @Html.ActionLink("Перейти к анкете", "Index", "Form")
+<hr />
+
+@Html.ColoredText("Hello, world!", AspNetCoreMvcHelpers.Helpers.Html.Color.Red)
+@Html.ColoredText("Hello, world!", AspNetCoreMvcHelpers.Helpers.Html.Color.Green)
+@Html.ColoredText("Hello, world!", AspNetCoreMvcHelpers.Helpers.Html.Color.Blue)
+
+<hr />
+
+<bootstrap-button>Привет, мир!</bootstrap-button>
